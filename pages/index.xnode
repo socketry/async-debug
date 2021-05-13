@@ -1,0 +1,3 @@
+<content:page title="Reactor Overview">
+	#{attributes[:tag].to_html}
+</content:page>

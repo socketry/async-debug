@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<?r response.cache! ?>
+		
+		<?r if title = self[:title] ?>
+			<title>#{title.gsub(/<.*?>/, "")}</title>
+		<?r else ?>
+			<title>Async Debug</title>
+		<?r end ?>
+		
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="icon" type="image/png" href="/_static/icon.png" />
+		<link rel="stylesheet" href="/_static/site.css" type="text/css" media="screen" />
+		
+		<script src="/_components/jquery/jquery.min.js"></script>
+		<script src="/_components/jquery-syntax/jquery.syntax.min.js"></script>
+		
+		<script src="/_static/links.js"></script>
+		
+		<script src="/_components/morphdom/morphdom-umd.js"></script>
+		<script src="/_components/@socketry/live/live.js"></script>
+		
+		<script type="text/javascript">
+		//<![CDATA[
+			jQuery(function($) {
+				$.syntax();
+			});
+		//]]>
+		</script>
+	</head>
+
+	<body>
+		<content:header />
+		
+		<main>
+			<utopia:content/>
+		</main>
+	</body>
+</html>
