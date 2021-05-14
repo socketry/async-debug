@@ -6,7 +6,7 @@ A web-based debugger for asynchronous applications.
 
 ## Usage
 
-Please see the [project documentation](https://ioquatix.github.io/async-debug/).
+Please see the [project documentation](https://socketry.github.io/async-debug/).
 
 ## Contributing
 
