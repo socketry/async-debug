@@ -2,7 +2,7 @@
 
 A web-based debugger for asynchronous applications.
 
-[![Development Status](https://github.com/ioquatix/async-debug/workflows/Development/badge.svg)](https://github.com/ioquatix/async-debug/actions?workflow=Development)
+[![Development Status](https://github.com/socketry/async-debug/workflows/Development/badge.svg)](https://github.com/socketry/async-debug/actions?workflow=Development)
 
 ## Usage
 
