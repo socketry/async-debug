@@ -12,6 +12,8 @@ $ bundle add async-debug
 
 ## Attaching the Debugger
 
+You need to add {ruby Async::Debug.serve} to your event loop.
+
 ~~~ ruby
 require 'async'
 require 'async/debug'

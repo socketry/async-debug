@@ -29,6 +29,9 @@ require 'utopia/setup'
 
 module Async
 	module Debug
+		# Start the debugger.
+		#
+		# @parameter endpoint [Async::IO::Endpoint] The endpoint to bind to. Defaults to <https://localhost:9090>.
 		def self.serve(endpoint: nil)
 			endpoint ||= Falcon::Endpoint.parse("https://localhost:9090")
 			builder = Rack::Builder.new
