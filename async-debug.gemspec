@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
 	
 	spec.files = Dir.glob('{lib,pages,public}/**/*', File::FNM_DOTMATCH, base: __dir__)
 	
-	spec.required_ruby_version = ">= 2.7.0"
+	spec.required_ruby_version = ">= 2.5.0"
 	
 	spec.add_dependency "utopia"
 	spec.add_dependency "falcon"
