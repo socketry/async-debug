@@ -15,13 +15,21 @@ $ bundle add async-debug
 You need to add {ruby Async::Debug.serve} to your event loop.
 
 ~~~ ruby
+puts RUBY_VERSION
+
 require 'async'
 require 'async/debug'
 
 Async do |task|
-	Async::Debug.serve
+	debug = Async::Debug.serve
 	
-	task.sleep(1000)
+	numbers = 10.times.map{rand(10)}
+	
+	numbers.each do |number|
+		Async(annotation: "Sleep(#{number})") do |child|
+			child.sleep(number)
+		end
+	end
 end
 ~~~
 
