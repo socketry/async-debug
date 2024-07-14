@@ -8,11 +8,11 @@ require 'live'
 module Async
 	module Debug
 		class ReactorView < Live::View
-			def initialize(id, **data)
+			def initialize(...)
 				super
 				
 				@update = nil
-				@top = Async::Task.current.reactor
+				@root = Async::Task.current.root
 			end
 			
 			def bind(page)
@@ -21,7 +21,7 @@ module Async
 				@update = Async do |task|
 					while true
 						task.sleep(1.0/10.0)
-						self.replace!
+						self.update!
 					end
 				end
 			end
@@ -33,10 +33,10 @@ module Async
 			end
 			
 			def handle(event, details)
-				replace!
+				update!
 			end
 			
-			def render_node(builder, node = @top)
+			def render_node(builder, node = @root)
 				klass = []
 				title = []
 				

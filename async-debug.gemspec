@@ -19,11 +19,10 @@ Gem::Specification.new do |spec|
 		"source_code_uri" => "https://github.com/socketry/async-debug.git",
 	}
 	
-	spec.files = Dir.glob(['{lib,pages,public}/**/*', '*.md'], File::FNM_DOTMATCH, base: __dir__)
+	spec.files = Dir.glob(['{lib,public}/**/*', '*.md'], File::FNM_DOTMATCH, base: __dir__)
 	
 	spec.required_ruby_version = ">= 3.1"
 	
-	spec.add_dependency "falcon", "~> 0.42"
-	spec.add_dependency "live", "~> 0.5"
-	spec.add_dependency "utopia"
+	spec.add_dependency "async-http", "~> 0.69"
+	spec.add_dependency "lively", "~> 0.10"
 end
