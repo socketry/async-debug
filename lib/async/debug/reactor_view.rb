@@ -18,9 +18,9 @@ module Async
 			def bind(page)
 				super(page)
 				
-				@update = Async do |task|
+				@update = Async do
 					while true
-						task.sleep(1.0/10.0)
+						sleep(1.0/10.0)
 						self.update!
 					end
 				end

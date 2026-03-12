@@ -14,7 +14,7 @@ Async do
 		i = 0
 		while true
 			task.annotate("Loop Iteration #{i}")
-			task.sleep 0.1
+			sleep 0.1
 			i += 1
 		end
 	end
